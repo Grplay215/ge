@@ -31,12 +31,21 @@ function calcularMedia(N1, N2, N3, N4) {
     
 }
 
+function resultadonota() {
+    
+    let concluido = Number(resultado)
+
+
+    return Number(concluido)
+
+}
+
 function passou() {
 
     if (resultado < 50) {
         escolar = " REPROVADO"
         
-    }else if (resultado >=50 || resultado < 69.9) {
+    }else if (resultado >=50 && resultado < 69.9) {
         escolar = " EXAME"
         
     } else if (resultado >= 70) {
@@ -82,5 +91,6 @@ module.exports = {
     calcularMedia,
     passou,
     exame,
-    resulexam
+    resulexam,
+    resultadonota
 }

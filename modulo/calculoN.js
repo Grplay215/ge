@@ -42,7 +42,7 @@ function resultadonota() {
 
 function passou() {
 
-    if (resultado < 50) {
+    if (resultado < 49.9) {
         escolar = " REPROVADO"
         
     }else if (resultado >=50 && resultado < 69.9) {

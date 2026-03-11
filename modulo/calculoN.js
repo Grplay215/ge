@@ -70,7 +70,7 @@ function exame(EXAME){
     let = notafinal = EXAME
 
    
-    notaexam = (nota1 + nota2 + nota3 + nota4 + notafinal) / 5
+    notaexam = (resultado + notafinal) / 2
     return Number(notaexam)
 
 }
@@ -93,5 +93,6 @@ module.exports = {
     exame,
     resulexam,
     resultadonota,
+    resultado
     
 }

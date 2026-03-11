@@ -47,6 +47,7 @@ entradaDedados.question('Qual o nome do aluno? ', function (nome) {
                                         let esco = extorico.calcularMedia(notas1, notas2, notas3, notas4)
                                         let lar = extorico.passou()
                                         let resultado = extorico.resultadonota()
+                                        let normalresul = extorico.resultado
 //                                                  ------------------------------------------
 //                                                  ------------------------------------------
                                         if (resultado >=50 && resultado < 69.9) {
@@ -63,7 +64,7 @@ entradaDedados.question('Qual o nome do aluno? ', function (nome) {
                                                         Curso: ${nomedocurso}
                                                         Professora: ${nomedoprofessor}
                                                         Notas da aluna: ${notas1}, ${notas2}, ${notas3}, ${notas4}, ${notadoexame}
-                                                        Média Final: ${esco}
+                                                        Média Final: ${normalresul}
                                                         Média final do Exame: ${ex}`)
                                                 } else if (genero == 'MASCULINO' || genero2 == 'MASCULINO') {
                                                     console.log(`
@@ -71,7 +72,7 @@ entradaDedados.question('Qual o nome do aluno? ', function (nome) {
                                                         Curso: ${nomedocurso}
                                                         Professor: ${nomedoprofessor}
                                                         Notas do aluno: ${notas1}, ${notas2}, ${notas3}, ${notas4}, ${Number(notadoexame)}
-                                                        Média Final: ${esco}
+                                                        Média Final: ${normalresul}
                                                         Média final do Exame: ${ex}`)
                                                 } else if (genero == 'FEMININO' || genero2 == 'MASCULINO') {
                                                     console.log(`
@@ -79,7 +80,7 @@ entradaDedados.question('Qual o nome do aluno? ', function (nome) {
                                                         Curso: ${nomedocurso}
                                                         Professor: ${nomedoprofessor}
                                                         Notas da aluna: ${notas1}, ${notas2}, ${notas3}, ${notas4}, ${Number(notadoexame)}
-                                                        Média Final: ${esco}
+                                                        Média Final: ${normalresul}
                                                         Média final do Exame: ${ex}`)
                                                 } else if (genero == 'MASCULINO' || genero2 == 'FEMININO') {
                                                     console.log(`
@@ -87,7 +88,7 @@ entradaDedados.question('Qual o nome do aluno? ', function (nome) {
                                                         Curso: ${nomedocurso}
                                                         Professora: ${nomedoprofessor}
                                                         Notas do aluno: ${notas1}, ${notas2}, ${notas3}, ${notas4}, ${Number(notadoexame)}
-                                                        Média Final: ${esco}
+                                                        Média Final: ${normalresul}
                                                         Média final do Exame: ${ex}`)
                                                 }
 
@@ -99,6 +100,30 @@ entradaDedados.question('Qual o nome do aluno? ', function (nome) {
                                                 Curso: ${nomedocurso}
                                                 Professor: ${nomedoprofessor}
                                                 Notas do aluno: ${notas1}, ${notas2}, ${notas3}, ${notas4}
+                                                Média Final: ${resultado}
+                                                `)
+                                        } else if(genero == 'MASCULINO' || genero2 == 'FEMININO') {
+                                            console.log(`
+                                                O aluno ${nomeDoAluno} foi ${lar} na disciplina ${materia}.
+                                                Curso: ${nomedocurso}
+                                                Professora: ${nomedoprofessor}
+                                                Notas do aluno: ${notas1}, ${notas2}, ${notas3}, ${notas4}
+                                                Média Final: ${resultado}
+                                                `)
+                                        } else if(genero == 'FEMININO' || genero2 == 'MASCULINO') {
+                                            console.log(`
+                                                A aluna ${nomeDoAluno} foi ${lar} na disciplina ${materia}.
+                                                Curso: ${nomedocurso}
+                                                Professor: ${nomedoprofessor}
+                                                Notas da aluna: ${notas1}, ${notas2}, ${notas3}, ${notas4}
+                                                Média Final: ${resultado}
+                                                `)
+                                        } else if(genero == 'FEMININO' || genero2 == 'FEMININO') {
+                                            console.log(`
+                                                A aluna ${nomeDoAluno} foi ${lar} na disciplina ${materia}.
+                                                Curso: ${nomedocurso}
+                                                Professora: ${nomedoprofessor}
+                                                Notas da aluna: ${notas1}, ${notas2}, ${notas3}, ${notas4}
                                                 Média Final: ${resultado}
                                                 `)
                                         }

@@ -92,5 +92,6 @@ module.exports = {
     passou,
     exame,
     resulexam,
-    resultadonota
+    resultadonota,
+    
 }

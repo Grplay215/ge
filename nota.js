@@ -73,18 +73,34 @@ entradaDedados.question('Qual o nome do aluno? ', function (nome) {
                                                         Notas do aluno: ${notas1}, ${notas2}, ${notas3}, ${notas4}, ${Number(notadoexame)}
                                                         Média Final: ${esco}
                                                         Média final do Exame: ${ex}`)
+                                                } else if (genero == 'FEMININO' || genero2 == 'MASCULINO') {
+                                                    console.log(`
+                                                        O aluna ${nomeDoAluno} foi ${resex} na disciplina ${materia}.
+                                                        Curso: ${nomedocurso}
+                                                        Professor: ${nomedoprofessor}
+                                                        Notas da aluna: ${notas1}, ${notas2}, ${notas3}, ${notas4}, ${Number(notadoexame)}
+                                                        Média Final: ${esco}
+                                                        Média final do Exame: ${ex}`)
+                                                } else if (genero == 'MASCULINO' || genero2 == 'FEMININO') {
+                                                    console.log(`
+                                                        O aluno ${nomeDoAluno} foi ${resex} na disciplina ${materia}.
+                                                        Curso: ${nomedocurso}
+                                                        Professora: ${nomedoprofessor}
+                                                        Notas do aluno: ${notas1}, ${notas2}, ${notas3}, ${notas4}, ${Number(notadoexame)}
+                                                        Média Final: ${esco}
+                                                        Média final do Exame: ${ex}`)
                                                 }
 
                                             })
 
-                                        } else {
+                                        } else if(genero == 'MASCULINO' || genero2 == 'MASCULINO') {
                                             console.log(`
                                                 O aluno ${nomeDoAluno} foi ${lar} na disciplina ${materia}.
                                                 Curso: ${nomedocurso}
                                                 Professor: ${nomedoprofessor}
-                                                Notas do aluno: ${notas1}, ${notas2}, ${notas3}, ${notas4}, ${notadoexame}
-                                                Média Final: ${esco}
-                                                Média final do Exame: ${ex}`)
+                                                Notas do aluno: ${notas1}, ${notas2}, ${notas3}, ${notas4}
+                                                Média Final: ${resultado}
+                                                `)
                                         }
 
 
